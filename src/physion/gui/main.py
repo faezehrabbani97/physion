@@ -262,7 +262,7 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             # self.facemotion()
             # self.pupil()
-            self.transfer_gui()
+            self.red_channel_labelling()
             # self.suite2p_preprocessing_UI()
             # self.build_NWB_UI()
             # self.add_imaging()

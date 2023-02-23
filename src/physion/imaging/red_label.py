@@ -187,13 +187,16 @@ def load_RCL(self):
 
         self.stat = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'stat.npy'), allow_pickle=True)
 
-        if os.path.isfile(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell_manual.npy')):
-            self.redcell = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell_manual.npy'), allow_pickle=True)
-        else:
-            self.redcell = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell.npy'), allow_pickle=True)
-
+        #if os.path.isfile(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell_manual.npy')):
+        #    self.redcell = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell_manual.npy'), allow_pickle=True)
+        #else:
+        #    self.redcell = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'redcell.npy'), allow_pickle=True)
+	
         self.iscell = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'iscell.npy'), allow_pickle=True)
         self.ops = np.load(os.path.join(self.folder, 'suite2p', 'plane0', 'ops.npy'), allow_pickle=True).item()
+        
+        self.ops['meanImg_chan2'] = self.ops['meanImg']
+        self.redcell = self.iscell
 
         # self.build_linear_interpolation()
 

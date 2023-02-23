@@ -46,3 +46,7 @@ N.B. we extract the available information form the `xml` Bruker file, see here [
 The fluorescence variations "dF/F0" were computed as followed. "dF" was the raw fluorescence corrected by the neuropil. "F0" was the sliding raw fluorescence (not corected by the neuropil), this setting impedes that the few ROIs with weak intrinsic signals and high neuropil signal would ge a F0 close to 0 and thus potentially high "dF/F0" values. This settings leads to relatively low values for the "dF/F0" variations (compared to the setting where "F0" also has the neuropil substraction).
 
 The preprocessing step and some analysis are illustrated in the [demo notebooks](../../notebooks).
+
+## Red Channel Labelling 
+
+[...]
